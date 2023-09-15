@@ -9,4 +9,25 @@ class Array
         hash_counter.each_key { |key| array << key}
         return array
     end 
+
+
+    def two_sum
+        new_array = []
+        self.each_with_index do |ele, i|
+            if self[i + 1..-1].include?(0 - ele)
+                new_array << [i, self.index(-ele)]
+            end 
+        end 
+        new_array
+    end 
+
+
+
+
+
+
+
+
+
+
 end 
