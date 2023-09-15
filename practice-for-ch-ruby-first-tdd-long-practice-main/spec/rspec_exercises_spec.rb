@@ -30,3 +30,15 @@ describe "my_transpose" do
         expect(my_transpose([[0,1,2],[3,4,5],[6,7,8]])).to eq([[0, 3, 6], [1, 4, 7],[2, 5, 8]])
     end 
 end 
+
+
+describe "stock_picker" do 
+    subject(:stock_prices)  {[5, 1, 2, 9, 5, 15, 30, 1, 2]}
+    it "outputs the most profitable pair of days on which to first buy the stock and then sell the stock." do 
+
+        expect(stock_picker(stock_prices)).to eq([1, 6])
+
+    end 
+
+
+end 

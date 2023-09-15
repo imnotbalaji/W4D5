@@ -32,14 +32,20 @@ def my_transpose(array)
         end 
         transpose_row << new_row
     end 
-
-
-
-
-    # array.each_with_index do |sub,row|
-    #     (0...sub.length).each do |col|
-    #         transpose_row << array[row][col]
-    #     end 
-    # end 
     return transpose_row
+end 
+
+
+def stock_picker(arr)
+    max = 0
+    max_days = []
+    (0...arr.length).each do |i|
+        (i + 1...arr.length).each do |j|
+            if arr[j] / arr[i] > max
+                max = arr[j] / arr[i]
+                max_days = [i , j]
+            end 
+        end 
+    end 
+    max_days
 end 
